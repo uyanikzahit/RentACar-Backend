@@ -55,5 +55,8 @@ namespace Business.Concrete
             _userDal.Update(user);
             return new SuccessResult(Messages.UserUpdated);
         }
+
+
+        
     }
 }

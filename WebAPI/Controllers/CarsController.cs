@@ -36,6 +36,7 @@ namespace WebAPI.Controllers
         {
             var result = _carService.GetById(id);
             if (result.Success)
+
             {
                 return Ok(result);
             }
