@@ -55,7 +55,7 @@ namespace Business.Concrete
         [CacheAspect]
         public IDataResult<List<Car>> GetAll()
         {
-            if (DateTime.Now.Hour == 7)
+            if (DateTime.Now.Hour == 22)
             {
                 return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
             }

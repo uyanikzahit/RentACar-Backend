@@ -17,12 +17,13 @@ namespace WebAPI.Controllers
         {
             _carService = carService;
         }
-        /*-----------------------GET------------------------------*/
+
         
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            Thread.Sleep(1000);
+
+            Thread.Sleep(100);
             var result = _carService.GetAll();
             if (result.Success)
             {
@@ -36,7 +37,6 @@ namespace WebAPI.Controllers
         {
             var result = _carService.GetById(id);
             if (result.Success)
-
             {
                 return Ok(result);
             }
@@ -46,6 +46,7 @@ namespace WebAPI.Controllers
         [HttpGet("getbybrandid")]
         public IActionResult GetCarsByBrandId(int brandId)
         {
+
             var result = _carService.GetCarsByBrandId(brandId);
             if (result.Success)
             {
@@ -125,7 +126,6 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        /*----------------------POST------------------------*/
 
         [HttpPost("add")]
         public IActionResult Add(Car car)
@@ -140,7 +140,7 @@ namespace WebAPI.Controllers
         [HttpDelete("delete")]
         public IActionResult Delete(Car car)
         {
-            var result = _carService.Add(car);
+            var result = _carService.Delete(car);
             if (result.Success)
             {
                 return Ok(result);
