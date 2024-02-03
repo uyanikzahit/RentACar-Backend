@@ -21,6 +21,7 @@ namespace Business.Concrete
             _colorDal = colorDal;
         }
 
+
         public IResult Add(Color color)
         {
             if (color.Name.Length >= 3)
